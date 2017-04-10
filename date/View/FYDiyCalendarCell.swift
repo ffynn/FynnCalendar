@@ -89,7 +89,7 @@ class FYDiyCalendarCell: FSCalendarCell {
     
     override func configureAppearance() {
         super.configureAppearance()
-        if self.placeholder {
+        if self.isPlaceholder {
             self.eventIndicator.isHidden = true
             self.titleLabel.textColor = UIColor.colorWithHex("#CCCCCC")
         }

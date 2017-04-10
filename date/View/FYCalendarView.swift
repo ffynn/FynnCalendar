@@ -34,29 +34,27 @@ class FYCalendarView: UIView, FSCalendarDelegate, FSCalendarDataSource, FSCalend
         calendar.dataSource = self
         calendar.delegate = self
         calendar.allowsMultipleSelection = true
+        calendar.clipsToBounds = true
+        calendar.swipeToChooseGesture.isEnabled = true
+        
+        calendar.calendarHeaderView.backgroundColor = UIColor.white
+        calendar.appearance.headerDateFormat = "yyyy年 MM月"
+        calendar.appearance.headerMinimumDissolvedAlpha = 0
+        calendar.appearance.headerTitleColor = UIColor.colorWithHex("#333333")
+        calendar.appearance.headerTitleFont = UIFont.systemFont(ofSize: 16)
+        
+        calendar.calendarWeekdayView.backgroundColor = UIColor.white
+        calendar.appearance.eventOffset = CGPoint(x: 0, y: -7)
+        calendar.appearance.weekdayTextColor = UIColor.colorWithHex("#666666")
+        calendar.appearance.titleWeekendColor = UIColor.colorWithHex("#FF9999")
+        calendar.register(FYDiyCalendarCell.self, forCellReuseIdentifier: "calendarCell")
+        
         self.addSubview(calendar)
         calendar.snp.makeConstraints { (make) in
             make.top.left.equalTo(self).offset(10)
             make.bottom.right.equalTo(self).offset(-10)
         }
         self.calendar = calendar
-        
-        calendar.calendarHeaderView.backgroundColor = UIColor.white
-        calendar.calendarWeekdayView.backgroundColor = UIColor.white
-        calendar.clipsToBounds = true
-        calendar.appearance.eventOffset = CGPoint(x: 0, y: -7)
-        calendar.appearance.headerDateFormat = "yyyy年 MM月"
-        calendar.appearance.headerMinimumDissolvedAlpha = 0
-        calendar.appearance.headerTitleColor = UIColor.colorWithHex("#333333")
-        calendar.appearance.headerTitleFont = UIFont.systemFont(ofSize: 16)
-        calendar.appearance.weekdayTextColor = UIColor.colorWithHex("#666666")
-        calendar.swipeToChooseGesture.isEnabled = true
-        calendar.register(FYDiyCalendarCell.self, forCellReuseIdentifier: "calendarCell")
-        calendar.swipeToChooseGesture.isEnabled = true
-        
-        let scopeGesture = UIPanGestureRecognizer(target: calendar, action: #selector(getter: calendar.scopeGesture));
-        calendar.addGestureRecognizer(scopeGesture)
-        
     }
     
     private func configure(cell: FSCalendarCell, for date: Date, at position: FSCalendarMonthPosition) {
@@ -126,10 +124,16 @@ class FYCalendarView: UIView, FSCalendarDelegate, FSCalendarDataSource, FSCalend
     }
     
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        if self.gregorian.isDateInToday(date) {
+            print("点击了今天")
+        }
         self.configureVisibleCells()
     }
     
     func calendar(_ calendar: FSCalendar, didDeselect date: Date) {
+        if self.gregorian.isDateInToday(date) {
+            print("取消了今天")
+        }
         self.configureVisibleCells()
     }
     

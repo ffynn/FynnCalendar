@@ -9,7 +9,13 @@
 import UIKit
 import Spring
 
+protocol FYNavMenuViewDelegate {
+    func indexOfScroll(_ index: NSInteger)
+}
+
 class FYNavMenuView: UIView {
+    
+    var delegate: FYNavMenuViewDelegate!
     
     let menuButtonCount: Int = 2
     let menuButtonTag: Int = 100
@@ -52,12 +58,11 @@ class FYNavMenuView: UIView {
     }
     
     func menuSelectionAction(_ button:SpringButton) {
-        changeBottomLineLoc(button.tag - menuButtonTag)
-        
         button.animation = "pop"
         button.curve = "easeIn"
-        button.duration = 0.5
+        button.duration = 0.4
         button.animate()
+        changeBottomLineLoc(button.tag - menuButtonTag)
     }
     
     /// 标志当前按钮的下划线
@@ -77,25 +82,14 @@ class FYNavMenuView: UIView {
     /// 下划线滚动改变位置
     ///
     /// - Parameter index: 点击的第几个按钮
-    func changeBottomLineLoc(_ index: Int) {
-        UIView.animate(withDuration: 0.4) {
+    func changeBottomLineLoc(_ index: NSInteger) {
+        self.delegate?.indexOfScroll(index)
+        UIView.animate(withDuration: 0.2) {
             self.bottomLine.snp.updateConstraints { (make) in
-                make.width.equalTo(10)
                 make.right.equalTo(self.snp.centerX).offset(-17.5 + CGFloat(index * 60))
             }
             self.layoutIfNeeded()
-            
-            UIView.animate(withDuration: 0.1, delay: 0.3, options: UIViewAnimationOptions.curveEaseInOut, animations: {
-                self.bottomLine.snp.updateConstraints { (make) in
-                    make.width.equalTo(25)
-                }
-                self.layoutIfNeeded()
-                
-            }) { (false) in
-                
-            }
         }
-
     }
 
 }

@@ -23,6 +23,10 @@
 		D8915B371E49610D0020FF4C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8915B361E49610D0020FF4C /* QuartzCore.framework */; };
 		D8915B391E4961120020FF4C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8915B381E4961120020FF4C /* UIKit.framework */; };
 		D8915B411E49B5D40020FF4C /* FYMonthTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8915B401E49B5D40020FF4C /* FYMonthTableViewCell.swift */; };
+		D8B6A7651E972276007D2BC6 /* FYBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B6A7641E972276007D2BC6 /* FYBaseViewController.swift */; };
+		D8B6A7691E972688007D2BC6 /* FYHeaderFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B6A7681E972688007D2BC6 /* FYHeaderFile.swift */; };
+		D8B6A76B1E972E5E007D2BC6 /* FYCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B6A76A1E972E5E007D2BC6 /* FYCalendarViewController.swift */; };
+		D8B6A76E1E976011007D2BC6 /* FYStatisticalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B6A76D1E976011007D2BC6 /* FYStatisticalViewController.swift */; };
 		D8CFF25B1E4C38500098BC0B /* FYDiyCalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CFF25A1E4C38500098BC0B /* FYDiyCalendarCell.swift */; };
 		D8CFF25D1E4C44500098BC0B /* FYCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CFF25C1E4C44500098BC0B /* FYCalendarView.swift */; };
 		D8CFF25F1E4D88C50098BC0B /* FYNavMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CFF25E1E4D88C50098BC0B /* FYNavMenuView.swift */; };
@@ -69,6 +73,10 @@
 		D8915B361E49610D0020FF4C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D8915B381E4961120020FF4C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D8915B401E49B5D40020FF4C /* FYMonthTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FYMonthTableViewCell.swift; sourceTree = "<group>"; };
+		D8B6A7641E972276007D2BC6 /* FYBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FYBaseViewController.swift; sourceTree = "<group>"; };
+		D8B6A7681E972688007D2BC6 /* FYHeaderFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FYHeaderFile.swift; sourceTree = "<group>"; };
+		D8B6A76A1E972E5E007D2BC6 /* FYCalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FYCalendarViewController.swift; sourceTree = "<group>"; };
+		D8B6A76D1E976011007D2BC6 /* FYStatisticalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FYStatisticalViewController.swift; sourceTree = "<group>"; };
 		D8CFF25A1E4C38500098BC0B /* FYDiyCalendarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FYDiyCalendarCell.swift; sourceTree = "<group>"; };
 		D8CFF25C1E4C44500098BC0B /* FYCalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FYCalendarView.swift; sourceTree = "<group>"; };
 		D8CFF25E1E4D88C50098BC0B /* FYNavMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FYNavMenuView.swift; sourceTree = "<group>"; };
@@ -128,6 +136,8 @@
 			isa = PBXGroup;
 			children = (
 				D88DBC101E4AA57D00EF4F5B /* FYHomeViewController.swift */,
+				D8B6A76A1E972E5E007D2BC6 /* FYCalendarViewController.swift */,
+				D8B6A76D1E976011007D2BC6 /* FYStatisticalViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -157,8 +167,10 @@
 		D8915B051E495FD90020FF4C /* date */ = {
 			isa = PBXGroup;
 			children = (
+				D8B6A7631E97224E007D2BC6 /* BaseController */,
 				D88DBC0F1E4AA4CE00EF4F5B /* Controller */,
 				D8915B3F1E49B5860020FF4C /* View */,
+				D8B6A7661E972649007D2BC6 /* Expand */,
 				D8915B3A1E49B2CF0020FF4C /* Main */,
 				D8915B061E495FD90020FF4C /* AppDelegate.swift */,
 				D8915B081E495FD90020FF4C /* ViewController.swift */,
@@ -200,15 +212,31 @@
 		D8915B3F1E49B5860020FF4C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D8915B401E49B5D40020FF4C /* FYMonthTableViewCell.swift */,
 				D88DBC121E4B226F00EF4F5B /* FYFunctionButton.swift */,
-				D8CFF25A1E4C38500098BC0B /* FYDiyCalendarCell.swift */,
-				D8CFF25C1E4C44500098BC0B /* FYCalendarView.swift */,
 				D8CFF25E1E4D88C50098BC0B /* FYNavMenuView.swift */,
+				D8CFF25C1E4C44500098BC0B /* FYCalendarView.swift */,
+				D8915B401E49B5D40020FF4C /* FYMonthTableViewCell.swift */,
+				D8CFF25A1E4C38500098BC0B /* FYDiyCalendarCell.swift */,
 			);
 			name = View;
 			path = date/View;
 			sourceTree = SOURCE_ROOT;
+		};
+		D8B6A7631E97224E007D2BC6 /* BaseController */ = {
+			isa = PBXGroup;
+			children = (
+				D8B6A7641E972276007D2BC6 /* FYBaseViewController.swift */,
+			);
+			path = BaseController;
+			sourceTree = "<group>";
+		};
+		D8B6A7661E972649007D2BC6 /* Expand */ = {
+			isa = PBXGroup;
+			children = (
+				D8B6A7681E972688007D2BC6 /* FYHeaderFile.swift */,
+			);
+			path = Expand;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -399,13 +427,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				D88DBC0C1E49D38F00EF4F5B /* FYMainTabBarController.swift in Sources */,
+				D8B6A76E1E976011007D2BC6 /* FYStatisticalViewController.swift in Sources */,
 				D8CFF25B1E4C38500098BC0B /* FYDiyCalendarCell.swift in Sources */,
 				D8CFF25F1E4D88C50098BC0B /* FYNavMenuView.swift in Sources */,
 				D88DBC111E4AA57D00EF4F5B /* FYHomeViewController.swift in Sources */,
+				D8B6A76B1E972E5E007D2BC6 /* FYCalendarViewController.swift in Sources */,
+				D8B6A7651E972276007D2BC6 /* FYBaseViewController.swift in Sources */,
 				D8CFF25D1E4C44500098BC0B /* FYCalendarView.swift in Sources */,
 				D88DBC0E1E49D6A100EF4F5B /* FYMainNavigationController.swift in Sources */,
 				D88DBC131E4B226F00EF4F5B /* FYFunctionButton.swift in Sources */,
 				D8915B091E495FD90020FF4C /* ViewController.swift in Sources */,
+				D8B6A7691E972688007D2BC6 /* FYHeaderFile.swift in Sources */,
 				D8915B411E49B5D40020FF4C /* FYMonthTableViewCell.swift in Sources */,
 				D8915B071E495FD90020FF4C /* AppDelegate.swift in Sources */,
 			);

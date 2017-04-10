@@ -3,25 +3,25 @@ PODS:
   - AlamofireImage (3.2.0):
     - Alamofire (~> 4.1)
   - BCColor (0.2)
-  - FSCalendar (2.6.0)
-  - MonkeyKing (1.2.1)
-  - NVActivityIndicatorView (3.1)
+  - FSCalendar (2.7.1)
+  - NVActivityIndicatorView (3.4)
   - SnapKit (3.1.2)
   - Spring (1.0.3)
   - SwiftDate (4.0.12)
   - SwiftyJSON (3.1.4)
+  - XLPagerTabStrip (7.0.0)
 
 DEPENDENCIES:
   - Alamofire
   - AlamofireImage
   - BCColor
   - FSCalendar
-  - MonkeyKing
   - NVActivityIndicatorView
   - SnapKit (~> 3.1.2)
   - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift3`)
   - SwiftDate (~> 4.0)
   - SwiftyJSON
+  - XLPagerTabStrip (~> 7.0)
 
 EXTERNAL SOURCES:
   Spring:
@@ -30,21 +30,21 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Spring:
-    :commit: 3a9227c6e9157e7b47f5ac1ee5abab2a56b50002
+    :commit: 8201b5c93bd7ebdf4cd18160bcde1e6e88c2be64
     :git: https://github.com/MengTo/Spring.git
 
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
   AlamofireImage: 157ed682cc81d3b9db4fb90c1f12180ac552d93b
   BCColor: 2425540cb0da92795b81a1f15b5289a92279c9eb
-  FSCalendar: c00fa5f4c3ec343ee6f7b804ae19322e9898bb84
-  MonkeyKing: f44795a0ed91a785b0e0bd2e4b6145199901528e
-  NVActivityIndicatorView: 9f47e8a4affb860ef729aeec99b1550219e6c233
+  FSCalendar: cfc95384cb0d648ad7c1957649ea74d6c26bb0de
+  NVActivityIndicatorView: 5754be63ceecd1df8af37d3c088d81872feeb8b8
   SnapKit: 12b24f569cb7c143acc9c22b9d91b23e7b1c84a2
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
   SwiftDate: 9a50045abc7b3515ede0fbed94705907279177b5
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  XLPagerTabStrip: 9be80a66c6b7d60306b2c0a6004965016d68f813
 
-PODFILE CHECKSUM: 0c468d22fc0521f59eb7bfa91ef7137934967716
+PODFILE CHECKSUM: cc68d3b637ec6f831941fc0171794cdd94728f26
 
 COCOAPODS: 1.2.0.beta.1

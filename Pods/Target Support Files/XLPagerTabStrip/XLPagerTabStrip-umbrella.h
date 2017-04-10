@@ -10,7 +10,8 @@
 #endif
 #endif
 
+#import "FXPageControl.h"
 
-FOUNDATION_EXPORT double MonkeyKingVersionNumber;
-FOUNDATION_EXPORT const unsigned char MonkeyKingVersionString[];
+FOUNDATION_EXPORT double XLPagerTabStripVersionNumber;
+FOUNDATION_EXPORT const unsigned char XLPagerTabStripVersionString[];
 

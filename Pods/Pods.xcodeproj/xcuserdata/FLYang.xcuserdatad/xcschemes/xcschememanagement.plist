@@ -24,11 +24,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>MonkeyKing.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>NVActivityIndicatorView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -59,10 +54,30 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>XLPagerTabStrip-XLPagerTabStrip.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>XLPagerTabStrip.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>34A758282C6B4E55A6A42BFF1F767521</key>
+		<key>103E2CFD1FC495FCD3A7AF10CFD8FD47</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1DA348EB69CE482A7995FDF2E48E7F7D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>23F3687FD94F8F8ED36EE296EE37053B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -72,12 +87,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4871B441D0F10A7F4FCF57195E91AA2C</key>
+		<key>7801F8D3B339857124350DF2D6116BC4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5A4892A709F98507D4B71A7571988203</key>
+		<key>7D7B731F0E0CA1D5D131052B72B3B243</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -87,27 +102,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>98C8A218B751706C84DC070E19557386</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9A551AE58963980D3A08DD59FADDEC9E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>9EFE4C70245EE2857D336B8B9FA4E825</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A68034967D03CA5FFABD79A42DA071A3</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C7563D5AE176C43B7EFA77306E3C43C9</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>CE84F2C86A6D83F2167348C8F8F460CE</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D768579523A4A585F7FC7E1B2EE7B135</key>
+		<key>C5A2DB7A84B7B78E359870D2E1B24AA7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

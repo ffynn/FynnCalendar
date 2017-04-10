@@ -7,10 +7,10 @@ target "date" do
  pod 'BCColor'
  pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift3'
  pod 'NVActivityIndicatorView'
- pod 'MonkeyKing'
  pod 'SwiftyJSON'
  pod 'Alamofire'
  pod 'AlamofireImage'
  pod 'SwiftDate', '~> 4.0'
- pod 'SnapKit', '~> 3.1.2' 
+ pod 'SnapKit', '~> 3.1.2'
+ pod 'XLPagerTabStrip', '~> 7.0' 
 end

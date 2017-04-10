@@ -11,8 +11,8 @@ import BCColor
 
 class FYMonthTableViewCell: UITableViewCell {
     
-    let CELL_WIDTH: CGFloat = FYHomeViewController().SCREEN_WIDTH
-    let CELL_HEIGHT: CGFloat = FYHomeViewController().CELL_HEIGHT
+    let CELL_WIDTH: CGFloat = CGFloat(SCREEN_WIDTH)
+    let CELL_HEIGHT: CGFloat = CGFloat(SCREEN_HEIGHT)
     
     weak var backView: UIView!
     weak var monthLabel: UILabel!

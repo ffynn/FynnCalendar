@@ -9,11 +9,6 @@
 import UIKit
 import Spring
 
-//@objc public protocol LiquidFloatingActionButtonDataSource {
-//    func numberOfCells(_ liquidFloatingActionButton: LiquidFloatingActionButton) -> Int
-//    func cellForIndex(_ index: Int) -> LiquidFloatingCell
-//}
-
 protocol FYFunctionButtonDelegate {
     func functionButton(_ functionButtonAction: FYFunctionButton)
 }
@@ -49,12 +44,12 @@ class FYFunctionButton: SpringButton {
         let anim = CABasicAnimation(keyPath: "transform.rotation.z")
         
         if button.isSelected {
-            anim.toValue = M_PI * (180/180.0)
+            anim.toValue = .pi * (180/180.0)
             self.backgroundColor = UIColor.colorWithHex("FF9999", alpha: 1)
             button.isSelected = false
             
         } else {
-            anim.toValue = M_PI * (135/180.0)
+            anim.toValue = .pi * (135/180.0)
             self.backgroundColor = UIColor.colorWithHex("B26969", alpha: 1)
             button.isSelected = true
         }
@@ -72,5 +67,4 @@ class FYFunctionButton: SpringButton {
         self.animate()
         self.delegate?.functionButton(button)
     }
-
 }
