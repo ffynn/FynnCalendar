@@ -18,5 +18,5 @@ class FYStatisticalViewController: UIViewController {
         super.viewDidLoad()
 
     }
-
+    
 }

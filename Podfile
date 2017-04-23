@@ -12,5 +12,5 @@ target "date" do
  pod 'AlamofireImage'
  pod 'SwiftDate', '~> 4.0'
  pod 'SnapKit', '~> 3.1.2'
- pod 'XLPagerTabStrip', '~> 7.0' 
+ pod 'Realm' 
 end

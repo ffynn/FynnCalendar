@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5D6117E3CF307FABDE5CA8B4 /* Pods_date.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D27A183ECD421C47DC38992 /* Pods_date.framework */; };
+		D87A2ACD1EA73007009E7B67 /* FYMainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87A2ACC1EA73007009E7B67 /* FYMainNavigationController.swift */; };
 		D88DBC0C1E49D38F00EF4F5B /* FYMainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88DBC0B1E49D38F00EF4F5B /* FYMainTabBarController.swift */; };
-		D88DBC0E1E49D6A100EF4F5B /* FYMainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88DBC0D1E49D6A100EF4F5B /* FYMainNavigationController.swift */; };
 		D88DBC111E4AA57D00EF4F5B /* FYHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88DBC101E4AA57D00EF4F5B /* FYHomeViewController.swift */; };
 		D88DBC131E4B226F00EF4F5B /* FYFunctionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88DBC121E4B226F00EF4F5B /* FYFunctionButton.swift */; };
 		D8915B071E495FD90020FF4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8915B061E495FD90020FF4C /* AppDelegate.swift */; };
@@ -52,13 +52,13 @@
 /* Begin PBXFileReference section */
 		6D27A183ECD421C47DC38992 /* Pods_date.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_date.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		961A51DA4F9697EF47D6F86F /* Pods-date.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-date.debug.xcconfig"; path = "Pods/Target Support Files/Pods-date/Pods-date.debug.xcconfig"; sourceTree = "<group>"; };
+		D87A2ACC1EA73007009E7B67 /* FYMainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FYMainNavigationController.swift; sourceTree = "<group>"; };
 		D88DBC0B1E49D38F00EF4F5B /* FYMainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FYMainTabBarController.swift; sourceTree = "<group>"; };
-		D88DBC0D1E49D6A100EF4F5B /* FYMainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FYMainNavigationController.swift; sourceTree = "<group>"; };
 		D88DBC101E4AA57D00EF4F5B /* FYHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FYHomeViewController.swift; sourceTree = "<group>"; };
 		D88DBC121E4B226F00EF4F5B /* FYFunctionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FYFunctionButton.swift; sourceTree = "<group>"; };
 		D8915B031E495FD90020FF4C /* date.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = date.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8915B061E495FD90020FF4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D8915B081E495FD90020FF4C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D8915B081E495FD90020FF4C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
 		D8915B0B1E495FD90020FF4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D8915B0D1E495FD90020FF4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8915B101E495FD90020FF4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -173,7 +173,6 @@
 				D8B6A7661E972649007D2BC6 /* Expand */,
 				D8915B3A1E49B2CF0020FF4C /* Main */,
 				D8915B061E495FD90020FF4C /* AppDelegate.swift */,
-				D8915B081E495FD90020FF4C /* ViewController.swift */,
 				D8915B0A1E495FD90020FF4C /* Main.storyboard */,
 				D8915B0D1E495FD90020FF4C /* Assets.xcassets */,
 				D8915B0F1E495FD90020FF4C /* LaunchScreen.storyboard */,
@@ -203,7 +202,8 @@
 		D8915B3A1E49B2CF0020FF4C /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				D88DBC0D1E49D6A100EF4F5B /* FYMainNavigationController.swift */,
+				D8915B081E495FD90020FF4C /* ViewController.swift */,
+				D87A2ACC1EA73007009E7B67 /* FYMainNavigationController.swift */,
 				D88DBC0B1E49D38F00EF4F5B /* FYMainTabBarController.swift */,
 			);
 			path = Main;
@@ -428,13 +428,13 @@
 			files = (
 				D88DBC0C1E49D38F00EF4F5B /* FYMainTabBarController.swift in Sources */,
 				D8B6A76E1E976011007D2BC6 /* FYStatisticalViewController.swift in Sources */,
+				D87A2ACD1EA73007009E7B67 /* FYMainNavigationController.swift in Sources */,
 				D8CFF25B1E4C38500098BC0B /* FYDiyCalendarCell.swift in Sources */,
 				D8CFF25F1E4D88C50098BC0B /* FYNavMenuView.swift in Sources */,
 				D88DBC111E4AA57D00EF4F5B /* FYHomeViewController.swift in Sources */,
 				D8B6A76B1E972E5E007D2BC6 /* FYCalendarViewController.swift in Sources */,
 				D8B6A7651E972276007D2BC6 /* FYBaseViewController.swift in Sources */,
 				D8CFF25D1E4C44500098BC0B /* FYCalendarView.swift in Sources */,
-				D88DBC0E1E49D6A100EF4F5B /* FYMainNavigationController.swift in Sources */,
 				D88DBC131E4B226F00EF4F5B /* FYFunctionButton.swift in Sources */,
 				D8915B091E495FD90020FF4C /* ViewController.swift in Sources */,
 				D8B6A7691E972688007D2BC6 /* FYHeaderFile.swift in Sources */,

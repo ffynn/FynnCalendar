@@ -5,11 +5,13 @@ PODS:
   - BCColor (0.2)
   - FSCalendar (2.7.1)
   - NVActivityIndicatorView (3.4)
+  - Realm (2.4.2):
+    - Realm/Headers (= 2.4.2)
+  - Realm/Headers (2.4.2)
   - SnapKit (3.1.2)
   - Spring (1.0.3)
   - SwiftDate (4.0.12)
   - SwiftyJSON (3.1.4)
-  - XLPagerTabStrip (7.0.0)
 
 DEPENDENCIES:
   - Alamofire
@@ -17,11 +19,11 @@ DEPENDENCIES:
   - BCColor
   - FSCalendar
   - NVActivityIndicatorView
+  - Realm
   - SnapKit (~> 3.1.2)
   - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift3`)
   - SwiftDate (~> 4.0)
   - SwiftyJSON
-  - XLPagerTabStrip (~> 7.0)
 
 EXTERNAL SOURCES:
   Spring:
@@ -39,12 +41,12 @@ SPEC CHECKSUMS:
   BCColor: 2425540cb0da92795b81a1f15b5289a92279c9eb
   FSCalendar: cfc95384cb0d648ad7c1957649ea74d6c26bb0de
   NVActivityIndicatorView: 5754be63ceecd1df8af37d3c088d81872feeb8b8
+  Realm: d27b758e12d62a3371879a065d4c40aa212c5a54
   SnapKit: 12b24f569cb7c143acc9c22b9d91b23e7b1c84a2
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
   SwiftDate: 9a50045abc7b3515ede0fbed94705907279177b5
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
-  XLPagerTabStrip: 9be80a66c6b7d60306b2c0a6004965016d68f813
 
-PODFILE CHECKSUM: cc68d3b637ec6f831941fc0171794cdd94728f26
+PODFILE CHECKSUM: a1b54562f462ad9dcbe1bdd1f9631f0c9356cffb
 
 COCOAPODS: 1.2.0.beta.1
