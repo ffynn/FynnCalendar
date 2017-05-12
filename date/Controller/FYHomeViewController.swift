@@ -23,7 +23,7 @@ class FYHomeViewController: FYBaseViewController, UIScrollViewDelegate, FYNavMen
         self.view.backgroundColor = UIColor.gradientColor(CGPoint(x: 0.0, y: 0.0),
                                                           endPoint: CGPoint.init(x: 0.0, y: 1.0),
                                                              frame: self.view.frame,
-                                                            colors: [UIColor.colorWithHex("FF9999")!, UIColor.white])
+                                                            colors: [UIColor.colorWithHex(MAIN_COLOR)!, UIColor.colorWithHex(MAIN_COLOR_FE)!])
     }
     
     override func viewDidLoad() {
@@ -60,7 +60,7 @@ class FYHomeViewController: FYBaseViewController, UIScrollViewDelegate, FYNavMen
     
     func indexOfScroll(_ index: NSInteger) {
         var rollPoint = self.homeRollView.contentOffset
-        rollPoint.x = CGFloat(SCREEN_WIDTH * index)
+        rollPoint.x = CGFloat(Int(SCREEN_WIDTH) * index)
         UIView.animate(withDuration: 0.3) { 
             self.homeRollView.contentOffset = rollPoint
         }

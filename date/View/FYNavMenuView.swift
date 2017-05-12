@@ -31,7 +31,7 @@ class FYNavMenuView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.backgroundColor = UIColor.colorWithHex("#FFFFFF", alpha: 0)
+        self.backgroundColor = UIColor.colorWithHex(WHITE_COLOR, alpha: 0)
         addMenuButton()
     }
     

@@ -11,6 +11,11 @@ import FSCalendar
 
 class FYCalendarView: UIView, FSCalendarDelegate, FSCalendarDataSource, FSCalendarDelegateAppearance {
     
+    /// 当前选择的日期
+    var selectDay: String!
+    let todayDate = NSDate.init(timeIntervalSinceNow: 0)
+    
+    /// 转换日期格式
     let gregorian = Calendar(identifier: .gregorian)
     let formatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -27,7 +32,9 @@ class FYCalendarView: UIView, FSCalendarDelegate, FSCalendarDataSource, FSCalend
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.backgroundColor = UIColor.colorWithHex("#FFFFFF", alpha: 1)
+        self.selectDay = self.formatter.string(from: self.todayDate as Date)
+        
+        self.backgroundColor = UIColor.colorWithHex(WHITE_COLOR, alpha: 1)
         self.layer.cornerRadius = 10
     
         let calendar = FSCalendar.init()
@@ -40,13 +47,13 @@ class FYCalendarView: UIView, FSCalendarDelegate, FSCalendarDataSource, FSCalend
         calendar.calendarHeaderView.backgroundColor = UIColor.white
         calendar.appearance.headerDateFormat = "yyyy年 MM月"
         calendar.appearance.headerMinimumDissolvedAlpha = 0
-        calendar.appearance.headerTitleColor = UIColor.colorWithHex("#333333")
+        calendar.appearance.headerTitleColor = UIColor.colorWithHex(BLACK_COLOR_3)
         calendar.appearance.headerTitleFont = UIFont.systemFont(ofSize: 16)
         
         calendar.calendarWeekdayView.backgroundColor = UIColor.white
         calendar.appearance.eventOffset = CGPoint(x: 0, y: -7)
-        calendar.appearance.weekdayTextColor = UIColor.colorWithHex("#666666")
-        calendar.appearance.titleWeekendColor = UIColor.colorWithHex("#FF9999")
+        calendar.appearance.weekdayTextColor = UIColor.colorWithHex(BLACK_COLOR_6)
+        calendar.appearance.titleWeekendColor = UIColor.colorWithHex(MAIN_COLOR)
         calendar.register(FYDiyCalendarCell.self, forCellReuseIdentifier: "calendarCell")
         
         self.addSubview(calendar)
@@ -55,11 +62,12 @@ class FYCalendarView: UIView, FSCalendarDelegate, FSCalendarDataSource, FSCalend
             make.bottom.right.equalTo(self).offset(-10)
         }
         self.calendar = calendar
+
     }
     
     private func configure(cell: FSCalendarCell, for date: Date, at position: FSCalendarMonthPosition) {
         let diyCell = (cell as! FYDiyCalendarCell)
-        
+
         diyCell.todayImageView.isHidden = !self.gregorian.isDateInToday(date)
 
         if position == .current {
@@ -124,15 +132,17 @@ class FYCalendarView: UIView, FSCalendarDelegate, FSCalendarDataSource, FSCalend
     }
     
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        self.selectDay = self.formatter.string(from: date)
         if self.gregorian.isDateInToday(date) {
-            print("点击了今天")
+            print("点击了今天 \(self.formatter.string(from: date))")
         }
         self.configureVisibleCells()
     }
     
-    func calendar(_ calendar: FSCalendar, didDeselect date: Date) {
+    func calendar(_ calendar: FSCalendar, didDeselect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        self.selectDay = self.formatter.string(from: self.todayDate as Date)
         if self.gregorian.isDateInToday(date) {
-            print("取消了今天")
+            print("取消了今天 \(self.formatter.string(from: date))")
         }
         self.configureVisibleCells()
     }

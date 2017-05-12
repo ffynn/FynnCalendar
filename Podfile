@@ -12,5 +12,5 @@ target "date" do
  pod 'AlamofireImage'
  pod 'SwiftDate', '~> 4.0'
  pod 'SnapKit', '~> 3.1.2'
- pod 'Realm' 
+ pod 'RealmSwift'
 end

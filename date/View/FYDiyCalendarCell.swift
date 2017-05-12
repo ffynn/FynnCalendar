@@ -45,7 +45,7 @@ class FYDiyCalendarCell: FSCalendarCell {
         self.todayImageView = todayImageView
         
         let selectionLayer = CAShapeLayer()
-        selectionLayer.fillColor = UIColor.colorWithHex("#FF9999")?.cgColor
+        selectionLayer.fillColor = UIColor.colorWithHex(MAIN_COLOR)?.cgColor
         selectionLayer.actions = ["hidden": NSNull()]
         self.contentView.layer.insertSublayer(selectionLayer, below: self.titleLabel!.layer)
         self.selectedLayer = selectionLayer
@@ -91,7 +91,7 @@ class FYDiyCalendarCell: FSCalendarCell {
         super.configureAppearance()
         if self.isPlaceholder {
             self.eventIndicator.isHidden = true
-            self.titleLabel.textColor = UIColor.colorWithHex("#CCCCCC")
+            self.titleLabel.textColor = UIColor.colorWithHex(GRAY_COLOR_C)
         }
     }
 

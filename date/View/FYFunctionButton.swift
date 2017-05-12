@@ -23,11 +23,12 @@ class FYFunctionButton: SpringButton {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.setImage(UIImage(named: "icon_function_open"), for: UIControlState.normal)
+        self.setTitle("重新记录", for: UIControlState.selected)
+        self.titleLabel?.font = UIFont.systemFont(ofSize: 14)
         self.adjustsImageWhenDisabled = false
         self.adjustsImageWhenHighlighted = false
         self.isSelected = false
-        self.backgroundColor = UIColor.colorWithHex("FF9999", alpha: 1)
+        self.backgroundColor = UIColor.colorWithHex(MAIN_COLOR, alpha: 1)
         self.layer.cornerRadius = 50/2
         self.layer.borderColor = UIColor.white.cgColor
         self.layer.borderWidth = 2
@@ -37,27 +38,21 @@ class FYFunctionButton: SpringButton {
         self.addTarget(self, action: #selector(functionButtonClick(_ :)), for: UIControlEvents.touchUpInside)
     }
     
+    func setButtonTitle(_ title:String) {
+        self.setTitle(title, for: UIControlState.normal)
+    }
+    
     func functionButtonClick(_ button:FYFunctionButton) {
-        
         startSpringAnimation(button)
         
-        let anim = CABasicAnimation(keyPath: "transform.rotation.z")
-        
         if button.isSelected {
-            anim.toValue = .pi * (180/180.0)
-            self.backgroundColor = UIColor.colorWithHex("FF9999", alpha: 1)
+            self.backgroundColor = UIColor.colorWithHex(MAIN_COLOR)
             button.isSelected = false
             
         } else {
-            anim.toValue = .pi * (135/180.0)
-            self.backgroundColor = UIColor.colorWithHex("B26969", alpha: 1)
+            self.backgroundColor = UIColor.colorWithHex(GRAY_COLOR_C)
             button.isSelected = true
         }
-        
-        anim.duration = 0.3
-        anim.isRemovedOnCompletion = false
-        anim.fillMode = "forwards"
-        self.layer.add(anim, forKey: "rotationAnimation")
     }
     
     func startSpringAnimation(_ button:FYFunctionButton) {

@@ -8,6 +8,8 @@ PODS:
   - Realm (2.4.2):
     - Realm/Headers (= 2.4.2)
   - Realm/Headers (2.4.2)
+  - RealmSwift (2.4.2):
+    - Realm (= 2.4.2)
   - SnapKit (3.1.2)
   - Spring (1.0.3)
   - SwiftDate (4.0.12)
@@ -19,7 +21,7 @@ DEPENDENCIES:
   - BCColor
   - FSCalendar
   - NVActivityIndicatorView
-  - Realm
+  - RealmSwift
   - SnapKit (~> 3.1.2)
   - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift3`)
   - SwiftDate (~> 4.0)
@@ -42,11 +44,12 @@ SPEC CHECKSUMS:
   FSCalendar: cfc95384cb0d648ad7c1957649ea74d6c26bb0de
   NVActivityIndicatorView: 5754be63ceecd1df8af37d3c088d81872feeb8b8
   Realm: d27b758e12d62a3371879a065d4c40aa212c5a54
+  RealmSwift: 9556c0fe0f0cfecacfb755ae9e68ff379fc6bead
   SnapKit: 12b24f569cb7c143acc9c22b9d91b23e7b1c84a2
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
   SwiftDate: 9a50045abc7b3515ede0fbed94705907279177b5
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: a1b54562f462ad9dcbe1bdd1f9631f0c9356cffb
+PODFILE CHECKSUM: 39b03adbd71df2590447a2a40d33f6a702044d9f
 
 COCOAPODS: 1.2.0.beta.1
